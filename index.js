@@ -11,7 +11,7 @@ const sendMail=require('./controllers/sendMails')
 
 
 app.use(cors({
-    origin:["http://localhost:3000"],
+    origin:["https://email-fsx2.onrender.com"],
     methods:["GET", "POST", "PUT", "DELETE"],
     credentials:true
 }))
