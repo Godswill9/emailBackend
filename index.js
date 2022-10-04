@@ -19,6 +19,9 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser());
 
+app.get('/', (req, res)=>{
+    res.send({"message":"welcome! Its working well"})
+})
 
 
 
