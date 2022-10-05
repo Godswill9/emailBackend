@@ -6,34 +6,34 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
 
-const sendOtp=async()=>{
-    let transporter = await nodemailer.createTransport({
-        host:"localhost",
-        service:"gmail",
-        port: 3010,
-        secure: false,
-        auth: {
-        user: "guche9@gmail.com", // generated ethereal user
-        pass: "dgphjijafmzvtfoe", // generated ethereal password
-        },
-        tls:{
-            rejectUnauthorized:false
-        }
-    });
+// const sendOtp=async()=>{
+//     let transporter = await nodemailer.createTransport({
+//         host:"localhost",
+//         service:"gmail",
+//         port: 3010,
+//         secure: false,
+//         auth: {
+//         user: "guche9@gmail.com", // generated ethereal user
+//         pass: "dgphjijafmzvtfoe", // generated ethereal password
+//         },
+//         tls:{
+//             rejectUnauthorized:false
+//         }
+//     });
 
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
-        from: '"Uchechukwu" <guche9@gmail.com>', // sender address
-        to: recieversEmail, // list of receivers
-        subject: subject, // Subject line
-        // text: "Hello world?", // plain text body
-        html: `<h1>${message}</h1>`,
-    }).then(()=>{
-        console.log("Message sent: %s, info.messageId");
-        console.log("Preview URL: %s nodemailer.getTestMessageUrl(info)");
-    })
-    .catch((err)=> console.log(err))
-}
+//     // send mail with defined transport object
+//     let info = await transporter.sendMail({
+//         from: '"Uchechukwu" <guche9@gmail.com>', // sender address
+//         to: recieversEmail, // list of receivers
+//         subject: subject, // Subject line
+//         // text: "Hello world?", // plain text body
+//         html: `<h1>${message}</h1>`,
+//     }).then(()=>{
+//         console.log("Message sent: %s, info.messageId");
+//         console.log("Preview URL: %s nodemailer.getTestMessageUrl(info)");
+//     })
+//     .catch((err)=> console.log(err))
+// }
 
 //registration
 const signup=async(req, res, next)=>{ 
